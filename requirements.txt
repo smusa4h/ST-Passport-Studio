@@ -3,3 +3,4 @@ Pillow
 reportlab
 rembg[cpu]
 filelock
+gunicorn
