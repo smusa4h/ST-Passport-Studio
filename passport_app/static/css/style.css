@@ -1,0 +1,1712 @@
+
+/* =========================================
+   ST PASSPORT STUDIO
+   MAIN WEBSITE STYLES
+========================================= */
+
+:root {
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --navy: #10213f;
+
+    --background: #f6f8fc;
+    --white: #ffffff;
+
+    --text: #172033;
+    --muted: #748096;
+
+    --border: #e1e6ef;
+    --soft-blue: #eff6ff;
+    --soft-red: #fff1f2;
+
+    --success: #15803d;
+
+    --shadow: 0 4px 18px rgba(15, 23, 42, 0.04);
+}
+
+
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Inter, Arial, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    min-height: 100vh;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.main-header {
+    width: 100%;
+    min-height: 76px;
+    padding: 14px 5%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-icon {
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--primary);
+    color: var(--white);
+
+    border-radius: 12px;
+
+    font-size: 17px;
+    font-weight: 800;
+}
+
+.brand h2 {
+    font-size: 17px;
+    font-weight: 750;
+    color: var(--navy);
+}
+
+.brand p {
+    margin-top: 4px;
+    font-size: 11px;
+    color: var(--muted);
+}
+
+.header-note {
+    padding: 9px 14px;
+    background: var(--soft-blue);
+    color: var(--primary-dark);
+
+    border-radius: 8px;
+
+    font-size: 12px;
+    font-weight: 650;
+}
+
+
+/* =========================================
+   MAIN STUDIO
+========================================= */
+
+.studio-container {
+    width: min(1250px, 92%);
+    margin: 38px auto 60px;
+}
+
+.studio-heading {
+    margin-bottom: 28px;
+}
+
+.welcome-label {
+    display: inline-block;
+
+    margin-bottom: 10px;
+
+    color: var(--primary);
+    font-size: 11px;
+    font-weight: 750;
+    letter-spacing: 1.2px;
+}
+
+.studio-heading h1 {
+    font-size: 29px;
+    font-weight: 750;
+    color: var(--navy);
+}
+
+.studio-heading p {
+    margin-top: 9px;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   TWO COLUMN LAYOUT
+========================================= */
+
+.studio-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 310px;
+    align-items: start;
+    gap: 20px;
+}
+
+
+/* =========================================
+   PHOTOS SECTION
+========================================= */
+
+.photos-section,
+.settings-section {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    box-shadow: var(--shadow);
+}
+
+.photos-section {
+    padding: 22px;
+}
+
+.section-heading {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 15px;
+
+    margin-bottom: 20px;
+}
+
+.section-heading h2,
+.settings-heading h2 {
+    font-size: 17px;
+    font-weight: 750;
+    color: var(--text);
+}
+
+.section-heading p,
+.settings-heading p {
+    margin-top: 8px;
+    font-size: 12px;
+    line-height: 1.6;
+    color: var(--muted);
+}
+
+.photo-count {
+    white-space: nowrap;
+
+    padding: 7px 10px;
+
+    background: var(--soft-blue);
+    color: var(--primary-dark);
+
+    border-radius: 7px;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+
+/* =========================================
+   MULTIPLE UPLOAD AREA
+========================================= */
+
+.multi-upload-area {
+    min-height: 230px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px 25px;
+
+    background: #f8fbff;
+
+    border: 1px dashed #cbd7e8;
+    border-radius: 14px;
+
+    text-align: center;
+
+    transition: 0.2s ease;
+}
+
+.multi-upload-area:hover {
+    border-color: var(--primary);
+    background: #f2f7ff;
+}
+
+.upload-icon {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 14px;
+
+    background: #e0ecff;
+    color: var(--primary);
+
+    border-radius: 13px;
+
+    font-size: 27px;
+    font-weight: 600;
+}
+
+.multi-upload-area h3 {
+    font-size: 15px;
+    font-weight: 750;
+    color: var(--text);
+}
+
+.multi-upload-area > p {
+    margin-top: 8px;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.upload-button {
+    margin-top: 15px;
+
+    padding: 12px 22px;
+
+    background: var(--primary);
+    color: var(--white);
+
+    border: none;
+    border-radius: 9px;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    transition: 0.2s ease;
+}
+
+.upload-button:hover {
+    background: var(--primary-dark);
+}
+
+.multi-upload-area .upload-hint {
+    margin-top: 12px;
+    font-size: 11px;
+    color: var(--muted);
+}
+
+
+/* =========================================
+   PHOTO LIST
+========================================= */
+
+.photo-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    margin-top: 14px;
+}
+
+.empty-photo-message {
+    padding: 25px 10px;
+    text-align: center;
+}
+
+.empty-photo-message p {
+    color: var(--text);
+    font-size: 12px;
+    font-weight: 650;
+}
+
+.empty-photo-message span {
+    display: block;
+    margin-top: 6px;
+
+    color: var(--muted);
+    font-size: 11px;
+}
+
+
+/* =========================================
+   PHOTO CARDS
+========================================= */
+
+.photo-card {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    min-width: 0;
+    padding: 11px;
+
+    background: var(--white);
+
+    border: 1px solid var(--border);
+    border-radius: 11px;
+
+    transition: border-color 0.2s ease;
+}
+
+.photo-card:hover {
+    border-color: #b9c9e0;
+}
+
+.photo-thumbnail {
+    width: 58px;
+    height: 72px;
+
+    flex-shrink: 0;
+
+    overflow: hidden;
+
+    background: #edf1f7;
+    border-radius: 7px;
+}
+
+.photo-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.photo-details {
+    flex: 1;
+    min-width: 0;
+}
+
+.photo-filename {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text);
+}
+
+.photo-size {
+    margin-top: 5px;
+    font-size: 10px;
+    color: var(--muted);
+}
+
+.photo-controls {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    margin-top: 10px;
+}
+
+.copies-label {
+    font-size: 10px;
+    font-weight: 650;
+    color: var(--text);
+}
+
+.copies-input {
+    width: 58px;
+    height: 31px;
+
+    padding: 5px 8px;
+
+    border: 1px solid #d5dce7;
+    border-radius: 7px;
+
+    color: var(--text);
+    font-size: 12px;
+
+    outline: none;
+}
+
+.copies-input:focus {
+    border-color: var(--primary);
+}
+
+
+/* PHOTO ACTION BUTTONS */
+
+.photo-action-button {
+    min-height: 31px;
+    padding: 7px 10px;
+
+    border: none;
+    border-radius: 7px;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    transition: 0.2s ease;
+}
+
+.crop-photo-button,
+.edit-photo-button {
+    background: #fff1f2;
+    color: #be3455;
+}
+
+.crop-photo-button:hover,
+.edit-photo-button:hover {
+    background: #ffe0e5;
+}
+
+.remove-photo-button {
+    background: #f1f3f7;
+    color: #596579;
+}
+
+.remove-photo-button:hover {
+    background: #e3e7ef;
+}
+
+
+/* =========================================
+   PRINT SETTINGS
+========================================= */
+
+.settings-section {
+    padding: 20px;
+}
+
+.settings-heading {
+    margin-bottom: 20px;
+}
+
+.settings-summary {
+    display: flex;
+    flex-direction: column;
+}
+
+.summary-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+
+    padding: 12px 0;
+
+    border-bottom: 1px solid #edf0f5;
+}
+
+.summary-row span {
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.summary-row strong {
+    color: var(--text);
+    font-size: 11px;
+    font-weight: 750;
+    text-align: right;
+}
+
+
+/* =========================================
+   PRINT INFORMATION
+========================================= */
+
+.print-information {
+    margin-top: 19px;
+    padding: 12px;
+
+    background: var(--soft-blue);
+
+    border: 1px solid #cbdcf5;
+    border-radius: 9px;
+}
+
+.print-information strong {
+    color: var(--primary-dark);
+    font-size: 10px;
+}
+
+.print-information p {
+    margin-top: 7px;
+
+    color: #365477;
+    font-size: 10px;
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   GENERATE PDF BUTTON
+========================================= */
+
+.generate-pdf-button {
+    width: 100%;
+    min-height: 43px;
+
+    margin-top: 18px;
+    padding: 12px;
+
+    background: var(--primary);
+    color: var(--white);
+
+    border: none;
+    border-radius: 8px;
+
+    font-size: 12px;
+    font-weight: 750;
+
+    transition: 0.2s ease;
+}
+
+.generate-pdf-button:hover:not(:disabled) {
+    background: var(--primary-dark);
+    transform: translateY(-1px);
+}
+
+.generate-pdf-button:disabled {
+    background: #aebbd0;
+    cursor: not-allowed;
+}
+
+.privacy-note {
+    margin-top: 14px;
+
+    color: var(--muted);
+    font-size: 10px;
+    line-height: 1.7;
+    text-align: center;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    padding: 22px 15px;
+
+    background: var(--white);
+    border-top: 1px solid var(--border);
+
+    text-align: center;
+}
+
+footer p {
+    color: var(--muted);
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 850px) {
+
+    .studio-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .settings-section {
+        width: 100%;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .main-header {
+        min-height: 68px;
+        padding: 12px 4%;
+    }
+
+    .brand-icon {
+        width: 39px;
+        height: 39px;
+    }
+
+    .brand h2 {
+        font-size: 14px;
+    }
+
+    .brand p {
+        font-size: 9px;
+    }
+
+    .header-note {
+        padding: 7px 9px;
+        font-size: 9px;
+    }
+
+    .studio-container {
+        width: 94%;
+        margin: 25px auto 40px;
+    }
+
+    .studio-heading h1 {
+        font-size: 23px;
+    }
+
+    .studio-heading p {
+        font-size: 12px;
+    }
+
+    .photos-section {
+        padding: 14px;
+    }
+
+    .section-heading {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .photo-card {
+        align-items: flex-start;
+        gap: 9px;
+        padding: 9px;
+    }
+
+    .photo-thumbnail {
+        width: 49px;
+        height: 64px;
+    }
+
+    .photo-controls {
+        gap: 6px;
+    }
+
+    .photo-action-button {
+        padding: 7px 8px;
+        font-size: 9px;
+    }
+
+    .copies-input {
+        width: 49px;
+    }
+
+    .settings-section {
+        padding: 16px;
+    }
+
+}
+
+
+@media (max-width: 380px) {
+
+    .header-note {
+        display: none;
+    }
+
+    .photo-controls {
+        gap: 5px;
+    }
+
+    .photo-action-button {
+        font-size: 8px;
+        padding: 6px;
+    }
+
+}
+
+
+
+/* PASSPORT PHOTO EDITOR MODAL */
+
+.photo-editor-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(15, 23, 42, 0.75);
+    overflow-y: auto;
+}
+
+.photo-editor-modal {
+    width: 100%;
+    max-width: 650px;
+    max-height: 95vh;
+    overflow-y: auto;
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 24px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+    color: #172033;
+}
+
+.photo-editor-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.photo-editor-header h2 {
+    margin: 0;
+    font-size: 22px;
+}
+
+.photo-editor-header p {
+    margin: 6px 0 0;
+    color: #64748b;
+}
+
+.editor-close {
+    border: none;
+    background: #f1f5f9;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.photo-editor-preview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 250px;
+    max-height: 420px;
+    overflow: auto;
+    background: #f1f5f9;
+    border-radius: 12px;
+    padding: 15px;
+}
+
+.editor-canvas {
+    display: block;
+    max-width: 100%;
+    max-height: 380px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+.photo-editor-controls {
+    margin-top: 22px;
+}
+
+.editor-control {
+    margin-bottom: 18px;
+}
+
+.editor-control label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.editor-control input {
+    width: 100%;
+    cursor: pointer;
+}
+
+.photo-editor-actions,
+.photo-editor-footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.photo-editor-actions button,
+.photo-editor-footer button {
+    padding: 11px 16px;
+    border: 1px solid #dbe3ee;
+    border-radius: 9px;
+    background: #f8fafc;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.photo-editor-footer {
+    justify-content: flex-end;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 18px;
+}
+
+.photo-editor-footer .editor-apply {
+    background: #2563eb;
+    color: #ffffff;
+    border-color: #2563eb;
+}
+
+.photo-editor-footer button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+    .photo-editor-overlay {
+        padding: 10px;
+    }
+
+    .photo-editor-modal {
+        padding: 16px;
+    }
+
+    .photo-editor-actions button {
+        flex: 1;
+    }
+}
+
+
+
+/* =========================================
+   PASSPORT BACKGROUND EDITOR MODAL
+========================================= */
+
+.background-editor-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 100000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background: rgba(15, 23, 42, 0.78);
+    backdrop-filter: blur(5px);
+
+    overflow-y: auto;
+}
+
+.background-editor-modal {
+    width: 100%;
+    max-width: 650px;
+    max-height: 95vh;
+
+    padding: 25px;
+
+    overflow-y: auto;
+
+    background: #ffffff;
+    border: 1px solid #e5eaf2;
+    border-radius: 18px;
+
+    color: #172033;
+
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.28);
+
+    animation: backgroundModalOpen 0.25s ease;
+}
+
+@keyframes backgroundModalOpen {
+    from {
+        opacity: 0;
+        transform: translateY(15px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* HEADER */
+
+.background-editor-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 15px;
+
+    margin-bottom: 20px;
+}
+
+.background-editor-header h2 {
+    margin: 0;
+
+    color: #10213f;
+    font-size: 21px;
+    font-weight: 750;
+}
+
+.background-editor-header p {
+    margin-top: 7px;
+
+    color: #748096;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.background-close-button {
+    width: 36px;
+    height: 36px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #f1f5f9;
+    color: #475569;
+
+    border: none;
+    border-radius: 50%;
+
+    font-size: 24px;
+
+    transition: 0.2s ease;
+}
+
+.background-close-button:hover {
+    background: #e2e8f0;
+    color: #10213f;
+}
+
+/* PHOTO PREVIEW */
+
+.background-editor-preview {
+    min-height: 280px;
+    max-height: 420px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    overflow: hidden;
+
+    background-color: #f1f5f9;
+    background-image:
+        linear-gradient(45deg, #e2e8f0 25%, transparent 25%),
+        linear-gradient(-45deg, #e2e8f0 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, #e2e8f0 75%),
+        linear-gradient(-45deg, transparent 75%, #e2e8f0 75%);
+
+    background-size: 20px 20px;
+    background-position:
+        0 0,
+        0 10px,
+        10px -10px,
+        -10px 0;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 13px;
+}
+
+.background-preview-image {
+    display: block;
+
+    max-width: 100%;
+    max-height: 360px;
+
+    width: auto;
+    height: auto;
+
+    object-fit: contain;
+
+    border-radius: 5px;
+
+    box-shadow: 0 5px 20px rgba(15, 23, 42, 0.12);
+}
+
+/* BACKGROUND OPTIONS */
+
+.background-editor-options {
+    margin-top: 22px;
+}
+
+.background-editor-options h3 {
+    margin-bottom: 13px;
+
+    color: #172033;
+    font-size: 14px;
+    font-weight: 750;
+}
+
+.background-color-options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.background-color-button {
+    min-height: 65px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+
+    background: #ffffff;
+    color: #475569;
+
+    border: 1px solid #dce3ed;
+    border-radius: 10px;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    transition: 0.2s ease;
+}
+
+.background-color-button:hover {
+    border-color: #93b4ed;
+    background: #f8fbff;
+}
+
+.background-color-button.active {
+    border: 2px solid #2563eb;
+    background: #eff6ff;
+    color: #1d4ed8;
+}
+
+.color-swatch {
+    width: 25px;
+    height: 25px;
+
+    display: block;
+
+    border: 1px solid #d1d5db;
+    border-radius: 50%;
+}
+
+.white-swatch {
+    background: #ffffff;
+}
+
+.blue-swatch {
+    background: #0066cc;
+}
+
+.red-swatch {
+    background: #dc143c;
+}
+
+/* STATUS MESSAGE */
+
+.background-editor-status {
+    margin-top: 15px;
+    padding: 11px 13px;
+
+    background: #eff6ff;
+    color: #365477;
+
+    border: 1px solid #d5e4fa;
+    border-radius: 8px;
+
+    font-size: 11px;
+    line-height: 1.7;
+}
+
+/* ACTION BUTTONS */
+
+.background-editor-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    margin-top: 22px;
+    padding-top: 18px;
+
+    border-top: 1px solid #e8edf4;
+}
+
+.background-editor-actions button {
+    min-height: 41px;
+    padding: 10px 17px;
+
+    border: 1px solid #dce3ed;
+    border-radius: 8px;
+
+    font-size: 11px;
+    font-weight: 750;
+
+    transition: 0.2s ease;
+}
+
+.background-cancel-button {
+    background: #f1f5f9;
+    color: #475569;
+}
+
+.background-cancel-button:hover {
+    background: #e2e8f0;
+}
+
+.background-apply-button,
+.background-use-button {
+    background: #2563eb;
+    color: #ffffff;
+    border-color: #2563eb !important;
+}
+
+.background-apply-button:hover:not(:disabled),
+.background-use-button:hover {
+    background: #1d4ed8;
+}
+
+.background-editor-actions button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 600px) {
+    .background-editor-overlay {
+        padding: 10px;
+    }
+
+    .background-editor-modal {
+        padding: 16px;
+        border-radius: 14px;
+    }
+
+    .background-editor-header h2 {
+        font-size: 18px;
+    }
+
+    .background-editor-preview {
+        min-height: 220px;
+        max-height: 320px;
+        padding: 12px;
+    }
+
+    .background-preview-image {
+        max-height: 280px;
+    }
+
+    .background-editor-actions {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .background-editor-actions button {
+        width: 100%;
+        padding: 10px 8px;
+        font-size: 10px;
+    }
+
+    .background-apply-button,
+    .background-use-button {
+        grid-column: 1 / -1;
+    }
+}
+
+
+/* =========================================
+   PHOTO SIZE SETTINGS
+========================================= */
+
+.photo-size-settings {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 12px rgba(15, 23, 42, 0.04);
+}
+
+.photo-size-settings h3 {
+    font-size: 17px;
+    font-weight: 700;
+    color: #172033;
+    margin: 0 0 8px;
+}
+
+.photo-size-settings .setting-description {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #718096;
+    margin: 0 0 20px;
+}
+
+.photo-size-settings > label,
+.custom-size-input-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 9px;
+}
+
+.photo-size-select {
+    width: 100%;
+    min-height: 48px;
+    padding: 0 14px;
+    border: 1px solid #d8dee8;
+    border-radius: 9px;
+    background-color: #f9fafb;
+    color: #1f2937;
+    font-size: 14px;
+    font-weight: 500;
+    outline: none;
+    cursor: pointer;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.photo-size-select:hover {
+    border-color: #9ca3af;
+}
+
+.photo-size-select:focus {
+    border-color: #2563eb;
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+/* CUSTOM SIZE INPUTS */
+
+.custom-size-fields {
+    margin-top: 20px;
+    padding: 16px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 11px;
+}
+
+.custom-size-input-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.custom-size-input-group input {
+    width: 100%;
+    height: 44px;
+    padding: 0 11px;
+    border: 1px solid #d8dee8;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #1f2937;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.custom-size-input-group input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.10);
+}
+
+.custom-size-hint {
+    margin: 12px 0 0;
+    color: #718096;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 480px) {
+    .photo-size-settings {
+        padding: 16px;
+    }
+
+    .custom-size-input-group {
+        gap: 9px;
+    }
+}
+
+
+/* =========================================
+   ST PASSPORT STUDIO
+   MOBILE RESPONSIVENESS IMPROVEMENTS
+========================================= */
+
+/* PREVENT HORIZONTAL OVERFLOW */
+
+html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.studio-container,
+.studio-layout,
+.photos-section,
+.settings-section {
+    min-width: 0;
+    max-width: 100%;
+}
+
+/* TABLET RESPONSIVENESS */
+
+@media (max-width: 850px) {
+
+    .studio-container {
+        width: 94%;
+        margin: 28px auto 45px;
+    }
+
+    .studio-layout {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 18px;
+    }
+
+    .settings-section {
+        width: 100%;
+    }
+
+    .photo-card {
+        min-width: 0;
+    }
+
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 600px) {
+
+    /* HEADER */
+
+    .main-header {
+        width: 100%;
+        padding: 12px 4%;
+        gap: 10px;
+    }
+
+    .brand {
+        min-width: 0;
+        gap: 9px;
+    }
+
+    .brand h2 {
+        font-size: 14px;
+    }
+
+    .brand p {
+        font-size: 9px;
+    }
+
+    .header-note {
+        font-size: 9px;
+        padding: 7px 9px;
+        white-space: nowrap;
+    }
+
+    /* MAIN CONTAINER */
+
+    .studio-container {
+        width: 94%;
+        margin: 22px auto 35px;
+    }
+
+    .studio-heading {
+        margin-bottom: 20px;
+    }
+
+    .studio-heading h1 {
+        font-size: 22px;
+        line-height: 1.3;
+    }
+
+    .studio-heading p {
+        font-size: 12px;
+        line-height: 1.7;
+    }
+
+    /* MAIN SECTIONS */
+
+    .photos-section,
+    .settings-section {
+        border-radius: 12px;
+    }
+
+    .photos-section {
+        padding: 13px;
+    }
+
+    .settings-section {
+        padding: 15px;
+    }
+
+    /* SECTION HEADINGS */
+
+    .section-heading {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .section-heading h2,
+    .settings-heading h2 {
+        font-size: 16px;
+    }
+
+    /* UPLOAD AREA */
+
+    .multi-upload-area {
+        min-height: 200px;
+        padding: 22px 13px;
+    }
+
+    .multi-upload-area h3 {
+        font-size: 14px;
+    }
+
+    .multi-upload-area > p {
+        font-size: 11px;
+        line-height: 1.6;
+    }
+
+    .upload-button {
+        width: 100%;
+        max-width: 240px;
+        min-height: 44px;
+    }
+
+    /* PHOTO CARDS */
+
+    .photo-card {
+        align-items: flex-start;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .photo-thumbnail {
+        width: 55px;
+        height: 70px;
+    }
+
+    .photo-details {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .photo-filename {
+        font-size: 11px;
+        overflow-wrap: anywhere;
+    }
+
+    /* PHOTO CONTROLS */
+
+    .photo-controls {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 7px;
+    }
+
+    .photo-action-button {
+        min-height: 36px;
+        padding: 8px 10px;
+        font-size: 10px;
+    }
+
+    .copies-input {
+        min-height: 36px;
+        width: 55px;
+    }
+
+    /* PHOTO SIZE SETTINGS */
+
+    .photo-size-settings {
+        padding: 15px;
+        border-radius: 12px;
+    }
+
+    .photo-size-settings h3 {
+        font-size: 15px;
+    }
+
+    .photo-size-settings .setting-description {
+        font-size: 12px;
+    }
+
+    .photo-size-select {
+        min-height: 46px;
+        font-size: 13px;
+    }
+
+    .custom-size-fields {
+        padding: 12px;
+    }
+
+    .custom-size-input-group {
+        gap: 9px;
+    }
+
+    .custom-size-input-group input {
+        min-height: 44px;
+        font-size: 13px;
+    }
+
+    /* PRINT SETTINGS */
+
+    .summary-row {
+        padding: 11px 0;
+    }
+
+    .summary-row span,
+    .summary-row strong {
+        font-size: 11px;
+    }
+
+    .print-information {
+        padding: 11px;
+    }
+
+    .print-information p {
+        font-size: 11px;
+    }
+
+    /* GENERATE PDF */
+
+    .generate-pdf-button {
+        min-height: 48px;
+        font-size: 13px;
+    }
+
+    /* PHOTO EDITOR MODAL */
+
+    .photo-editor-overlay,
+    .background-editor-overlay {
+        padding: 8px;
+        align-items: center;
+    }
+
+    .photo-editor-modal,
+    .background-editor-modal {
+        width: 100%;
+        max-height: 94dvh;
+        padding: 15px;
+        border-radius: 13px;
+        overflow-y: auto;
+    }
+
+    .photo-editor-header h2,
+    .background-editor-header h2 {
+        font-size: 18px;
+    }
+
+    .photo-editor-preview {
+        min-height: 190px;
+        max-height: 300px;
+        padding: 10px;
+    }
+
+    .editor-canvas {
+        max-height: 270px;
+    }
+
+    .background-editor-preview {
+        min-height: 190px;
+        max-height: 300px;
+        padding: 10px;
+    }
+
+    .background-preview-image {
+        max-height: 270px;
+    }
+
+    /* MODAL BUTTONS */
+
+    .photo-editor-actions button,
+    .photo-editor-footer button,
+    .background-editor-actions button {
+        min-height: 42px;
+    }
+
+    /* FOOTER */
+
+    footer {
+        padding: 18px 12px;
+    }
+
+    footer p {
+        font-size: 10px;
+    }
+
+}
+
+/* SMALL MOBILE PHONES */
+
+@media (max-width: 380px) {
+
+    .studio-container {
+        width: 95%;
+    }
+
+    .main-header {
+        padding: 10px 3%;
+    }
+
+    .brand-icon {
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
+    }
+
+    .brand h2 {
+        font-size: 12px;
+    }
+
+    .header-note {
+        display: none;
+    }
+
+    .photos-section {
+        padding: 10px;
+    }
+
+    .photo-card {
+        gap: 8px;
+        padding: 8px;
+    }
+
+    .photo-thumbnail {
+        width: 45px;
+        height: 60px;
+    }
+
+    .photo-action-button {
+        padding: 7px 8px;
+        font-size: 9px;
+    }
+
+    .custom-size-input-group {
+        grid-template-columns: 1fr;
+    }
+
+    .background-color-options {
+        gap: 7px;
+    }
+
+}
+
+/* TOUCH SCREEN IMPROVEMENTS */
+
+@media (hover: none) and (pointer: coarse) {
+
+    button {
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .photo-action-button,
+    .upload-button,
+    .generate-pdf-button {
+        touch-action: manipulation;
+    }
+
+}

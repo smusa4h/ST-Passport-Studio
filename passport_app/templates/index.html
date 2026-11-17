@@ -1,0 +1,240 @@
+
+{% extends "base.html" %}
+
+{% block title %}ST Passport Studio | Multi-Photo Passport Maker{% endblock %}
+
+{% block content %}
+
+<section class="studio-container">
+
+    <!-- PAGE HEADING -->
+    <div class="studio-heading">
+        <div>
+            <span class="welcome-label">PASSPORT PHOTO WORKSPACE</span>
+            <h1>Create Your Passport Photos</h1>
+            <p>Upload, crop, edit and prepare your passport photos for printing.</p>
+        </div>
+    </div>
+
+    <!-- MAIN WORKSPACE -->
+    <div class="studio-layout">
+
+        <!-- LEFT SIDE: PHOTOS -->
+        <section class="photos-section">
+
+            <div class="section-heading">
+                <div>
+                    <h2>Your Photos</h2>
+                    <p>Upload up to 20 photos. You can set a different number of copies for each photo.</p>
+                </div>
+
+                <span class="photo-count" id="photoCount">
+                    0 / 20 Photos
+                </span>
+            </div>
+
+            <!-- UPLOAD AREA -->
+            <div class="multi-upload-area" id="uploadContainer">
+
+                <input
+                    type="file"
+                    id="photoInput"
+                    accept=".jpg,.jpeg,.png,.webp"
+                    multiple
+                    hidden
+                >
+
+                <div class="upload-icon">
+                    <span>↑</span>
+                </div>
+
+                <h3>Select your passport photos</h3>
+
+                <p>JPG, JPEG, PNG or WEBP · Maximum 20 photos</p>
+
+                <button
+                    type="button"
+                    class="upload-button"
+                    id="choosePhotosBtn"
+                >
+                    Choose Photos
+                </button>
+
+                <p class="upload-hint">
+                    You can select multiple photos at once.
+                </p>
+
+            </div>
+
+            <!-- PHOTO LIST -->
+            <div class="photo-list" id="photoList">
+                <!-- Photo cards created by JavaScript -->
+            </div>
+
+            <!-- EMPTY STATE -->
+            <div class="empty-photo-message" id="emptyPhotoMessage">
+                <p>No photos selected yet.</p>
+                <span>Choose your passport photos to get started.</span>
+            </div>
+
+        </section>
+
+        <!-- RIGHT SIDE: PRINT SETTINGS -->
+        <aside class="settings-section">
+
+            <div class="settings-heading">
+                <h2>Print Settings</h2>
+                <p>Review your layout before generating your PDF.</p>
+            </div>
+
+            <!-- PHOTO SIZE SETTINGS -->
+            <div class="photo-size-settings">
+
+                <h3>Photo Size</h3>
+
+                <p class="setting-description">
+                    Choose a preset size or enter your own dimensions.
+                </p>
+
+                <label for="photoSizeSelect">
+                    Select photo size
+                </label>
+
+                <select id="photoSizeSelect" class="photo-size-select">
+
+                    <option value="30x40" selected>
+                        30 × 40 mm (Default)
+                    </option>
+
+                    <option value="35x45">
+                        35 × 45 mm
+                    </option>
+
+                    <option value="2x2">
+                        2 × 2 inches
+                    </option>
+
+                    <option value="custom">
+                        Custom Size
+                    </option>
+
+                </select>
+
+                <!-- CUSTOM SIZE INPUTS -->
+                <div id="customSizeFields" class="custom-size-fields" hidden>
+
+                    <div class="custom-size-input-group">
+
+                        <div>
+                            <label for="customPhotoWidth">
+                                Width (mm)
+                            </label>
+
+                            <input
+                                type="number"
+                                id="customPhotoWidth"
+                                min="10"
+                                max="100"
+                                step="0.1"
+                                value="30"
+                                placeholder="Width"
+                            >
+                        </div>
+
+                        <div>
+                            <label for="customPhotoHeight">
+                                Height (mm)
+                            </label>
+
+                            <input
+                                type="number"
+                                id="customPhotoHeight"
+                                min="10"
+                                max="100"
+                                step="0.1"
+                                value="40"
+                                placeholder="Height"
+                            >
+                        </div>
+
+                    </div>
+
+                    <p class="custom-size-hint">
+                        Enter your required photo dimensions in millimetres.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- SETTINGS SUMMARY -->
+            <div class="settings-summary">
+
+                <div class="summary-row">
+                    <span>Selected photos</span>
+                    <strong id="selectedPhotos">0</strong>
+                </div>
+
+                <div class="summary-row">
+                    <span>Total copies</span>
+                    <strong id="totalCopies">0</strong>
+                </div>
+
+                <div class="summary-row">
+                    <span>Photo size</span>
+                    <strong id="photoSizeSummary">30 × 40 mm</strong>
+                </div>
+
+                <div class="summary-row">
+                    <span>Paper size</span>
+                    <strong>A4</strong>
+                </div>
+
+                <div class="summary-row">
+                    <span>Orientation</span>
+                    <strong>Portrait</strong>
+                </div>
+
+                <div class="summary-row">
+                    <span>Photos per row</span>
+                    <strong id="photosPerRow">6</strong>
+                </div>
+
+            </div>
+
+            <!-- PRINT INFORMATION -->
+            <div class="print-information">
+
+                <strong>Before printing</strong>
+
+                <p id="printInformationText">
+                    The default photo size is 30 × 40 mm.
+                    Actual passport requirements may differ by country
+                    or application. Check the required photo size
+                    before printing.
+                </p>
+
+            </div>
+
+            <!-- GENERATE PDF -->
+            <button
+                type="button"
+                class="generate-pdf-button"
+                id="generatePdfBtn"
+                disabled
+            >
+                Generate PDF
+            </button>
+
+            <p class="privacy-note">
+                Your photos are processed by this website to create
+                the PDF. Only upload images you are permitted to use.
+            </p>
+
+        </aside>
+
+    </div>
+
+</section>
+
+{% endblock %}
